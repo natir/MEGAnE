@@ -88,6 +88,11 @@ def process_reads(args, params, filenames):
                         tmp=process_bed(bed)
                         d.update(tmp)
                         bed=[]
+
+        bed='\n'.join(bed)
+        tmp=process_bed(bed)
+        d.update(tmp)
+
         del(simple)
         del(tes)
         del(retain)
